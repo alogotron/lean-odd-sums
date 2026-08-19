@@ -1,13 +1,11 @@
-import PalomarTemplate
+import OddSums
 
 /-!
 # Proved solution
 
-This module may import the full proof development. Comparator checks that the
-declaration below has exactly the same statement as its counterpart in
-`Challenge.lean` and uses only the permitted axioms.
+Comparator checks that the declaration below has exactly the same statement
+as its counterpart in `Challenge.lean` and uses only the permitted axioms.
 -/
 
-theorem PalomarTemplate.main_result (n : ℕ) : n + n = 2 * n := by
-  exact add_self_eq_two_mul n
-
+theorem OddSums.main_result (n : ℕ) : (∑ i ∈ Finset.range n, (2 * i + 1)) = n ^ 2 := by
+  exact sum_range_odd_eq_sq n
