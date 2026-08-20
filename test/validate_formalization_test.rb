@@ -234,8 +234,8 @@ class MetadataWorkflowRoutingTest < Minitest::Test
 
   def test_only_the_canonical_repository_uses_template_mode
     assert_includes CONDITIONS,
-                    "if: github.repository == 'PalomarRegistry/OddSums'"
+                    "if: github.repository == 'PalomarRegistry/PalomarTemplate'"
     assert_includes CONDITIONS,
-                    "if: github.repository != 'PalomarRegistry/OddSums'"
+                    "if: github.repository != 'PalomarRegistry/PalomarTemplate'"
   end
 end
